@@ -4,7 +4,8 @@
 @function font-url-prefixer($asset-pipeline) {
   @if $asset-pipeline == true {
     @return font-url;
-  } @else {
+  }
+  @else {
     @return url;
   }
 }
@@ -16,7 +17,7 @@
   $file-formats,
   $font-url) {
 
-  $src: ();
+  $src: null;
 
   $formats-map: (
     eot:   "#{$file-path}.eot?#iefix" format("embedded-opentype"),
